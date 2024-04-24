@@ -24,16 +24,19 @@ public class Player : MonoBehaviour
             transform.Translate(-velocidade * Time.deltaTime, 0, 0);
         }
     }
-    private void OnTriggerExit(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Space"))
+        if (collision.gameObject.CompareTag("Obstaculo"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Passagem"))
         {
             pontos++;
             pontosText.text = pontos.ToString();
-        }
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
