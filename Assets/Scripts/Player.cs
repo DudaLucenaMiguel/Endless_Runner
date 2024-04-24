@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaculoPreFab: {fileID: 5183959860854952937, guid: 29ba01ad67f52a244a00aa372784ff03, type: 3}
+  obstaculo: {fileID: 0}
   distancia: 8
   frequencia: 3
 --- !u!4 &814894086

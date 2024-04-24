@@ -1,9 +1,10 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Origem : MonoBehaviour
 {
     public GameObject obstaculoPreFab;
-    GameObject obstaculo;
+    public GameObject obstaculo;
     public int distancia;
     
     
@@ -24,4 +25,5 @@ public class Origem : MonoBehaviour
         obstaculo = Instantiate(obstaculoPreFab);
         obstaculo.transform.position = transform.position + new Vector3(Random.Range(distancia, -distancia), 0, 45);
     }
+    
 }
